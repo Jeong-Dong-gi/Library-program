@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="E460406B-FC58-7685-BD62-AE93303A6A69">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 01:46:18 UTC</createdTime>
+<ownerDesignName>도서관리 데이터베이스</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

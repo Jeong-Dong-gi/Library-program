@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="79B18C9E-648A-8132-A71A-5BF05E635A82" containerWithKeyObject="9827DFD4-CF2D-536F-E432-32E1A8E33A51" localFKIndex="1BCD57CE-B519-010F-2E30-2DF09DFCE91C" name="requestbook_user_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 02:25:13 UTC</createdTime>
+<ownerDesignName>도서관리 데이터베이스</ownerDesignName>
+<referredTableLongName>library_user</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A542F7D3-BE65-CEEA-A2A8-923860673F48</referredTableID>
+<keyObject>F4B55DC6-07BC-B260-9261-523D697E2A74</keyObject>
+<referredKeyID>F4B55DC6-07BC-B260-9261-523D697E2A74</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>user_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
