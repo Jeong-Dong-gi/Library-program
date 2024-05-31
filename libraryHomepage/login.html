@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #all{
+      position: absolute;
+      top: 50px;
+    }
+    header{
+      position: relative;
+      top: 10px;
+    }
+    #logo{
+      float: left;
+      height: 50px;
+      display: block;
+      position: relative;
+      left: 500px;
+      top: 60px;
+    }
+    #name{
+      float: left;
+      font-size: 50px;
+      margin-top: 0px;
+      background-image: url(img/bookLogo.jpg);
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: right;
+      padding-right: 45px;
+      border: none;
+      background-color: white;
+    }
+    #cloud{
+      margin-left: -370px;
+      margin-top: -140px;
+      position: relative;
+      z-index: -1;
+      width: 350px;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    #log{
+      position: relative;
+      left: 470px;
+      top: 180px;
+    }
+    fieldset{
+      border: 3px solid skyblue;
+      border-radius: 10px;
+      width: 270px;
+      position: absolute;
+      top: 30px;
+    }
+    #center{
+      position: relative;
+      margin: 10px;
+    }
+    #i1{
+      display: block;
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    #i2{
+      display: block;
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    #blogin{
+      display: block;
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 5px;
+      width: 260px;
+      background-color: skyblue;
+      color: white;
+    }
+    #help{
+      position: relative;
+      left: 475px;
+      top: 350px;
+      width: 303px;
+    }
+    #pass{
+      width: 35%;
+      background-color: white;
+      border: none;
+    }
+    #find{
+      width: 35%;
+      background-color: white;
+      border: none;
+    }
+    #participation{
+      width: 25%;
+      background-color: white;
+      border: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="all">
+    <header>
+      <div id="logo">
+        <p id="name"><a href="Home.html"><b>하늘도서관</b></a></p>
+        <img id="cloud" src="img/free-icon-clouds-9812010.png">
+      </div>
+    </header>
+    <div id="log">
+      <form method="post">
+          <fieldset>
+            <div id="center">
+              <input id="i1" type="text" placeholder="아이디" autocomplete="on">
+              <input id="i2" type="password" placeholder="비밀번호" autocomplete="off">
+              <br>
+            <button id="blogin">로그인</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div id="help">
+      <button id="pass">비밀번호 찾기</button>
+      <button id="find">아이디 찾기</button>
+      <button id="join"><a href="join.html">회원가입</a></button>
+    </div>
+  </div>
+  
+  <script>
+    const id=document.querySelector("#i1")
+    const pw=document.querySelector("#i2")
+    const blogin=document.querySelector("#blogin")
+    
+    // 아이디 또는 비밀번호가 공백인 경우
+    blogin.addEventListener("click",()=>{
+    if(id.value=="") {
+      alert("아이디를 입력해주세요")
+      return
+    }
+    if(pw.value=="") {
+      alert("비밀번호를 입력해주세요")
+      return
+    }
+  })
+  </script>
+</body>
+</html>

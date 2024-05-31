@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #all{
+      position: absolute;
+      top: 50px;
+    }
+    header{
+      position: relative;
+      top: 10px;
+    }
+    #info{
+      position: relative;
+      top: 0px;
+      left: 1000px;
+      display: inline;
+    }
+    #logo{
+      float: left;
+      height: 50px;
+      display: inline;
+      position: relative;
+      left: 100px;
+    }
+    #name{
+      float: left;
+      font-size: 50px;
+      margin-top: 0px;
+      background-image: url(img/bookLogo.jpg);
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: right;
+      padding-right: 45px;
+      border: none;
+      background-color: ivory;
+    }
+    #cloud{
+      margin-left: -370px;
+      margin-top: -140px;
+      position: relative;
+      z-index: -1;
+      width: 350px;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    #login{
+      float: left;
+      border: none;
+      margin-right: 10px;
+      background-color: skyblue;
+      font-size: 20px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    #join{
+      float: left;
+      border: none;
+      margin-right: 10px;
+      background-color: skyblue;
+      font-size: 20px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    body{
+      background-color: ivory;
+    }
+    /* 사이드바 */
+    aside{
+      position: absolute;
+      top: 300px;
+      left: 120px;
+    }
+    li{
+      list-style-type: none;
+      border-left: 2px solid skyblue;
+      border-right: 2px solid skyblue;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #l1{
+      border-top: 2px solid skyblue;
+      border-bottom: 3px solid skyblue;
+    }
+    #l2{
+      border-bottom: 3px solid skyblue;
+    }
+    #l3{
+      border-bottom: 3px solid skyblue;
+    }
+    #l4{
+      border-bottom: 3px solid skyblue;
+    }
+    #l5{
+      border-bottom: 2px solid skyblue;
+    }
+    /* 소개 */
+    #main{
+      position: relative;
+      left: 420px;
+      top: 60px;
+      width: 850px;
+    }
+    #intro{
+      font-size: 50px;
+      position: relative;
+      left: -120px;
+    }
+    #top{
+      border: 1px solid darkturquoise;
+      margin-top: -20px;
+      margin-bottom: 15px;
+    }
+    h2{
+      font-size: 30px;
+      
+    }
+    #come{
+      display: inline;
+    }
+    #map{
+      font-size: 16px;
+      position: relative;
+      left: 585px;
+      top: -5px;
+      border: none;
+      background-color: skyblue;
+      border-radius: 5px;
+      
+    }
+    #m{
+      color: white;
+    }
+    #location{
+      width: 850px;
+      margin-top: 10px;
+    }
+    .salutation{
+      font-size: 16px;
+      margin-top: -10px;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="all">
+    <header>
+      <div id="logo">
+        <p id="name"><a href="Home.html"><b>하늘도서관</b></a></p>
+        <img id="cloud" src="img/free-icon-clouds-9812010.png">
+      </div>
+      <div id="info">
+        <p id="login"><a href="login.html">로그인</a></p>
+        <p id="join"><a href="join.html">회원가입</a></p>
+      </div>
+    </header>
+      <div>
+        <aside>
+          <ul>
+            <li id="l1"><a href="list.html">도서 목록</a></li>
+            <li id="l2"><a href="loan.html">대출 신청</a></li>
+            <li id="l3"><a href="requestBook.html">책 요청</a></li>
+            <li id="l4"><a href="think.html">생각 나누기</a></li>
+            <li id="l5"><a href="Q&A.html">건의 사항</a></li>
+          </ul>
+        </aside>
+      </div>
+      <div id="main">
+        <h1 id="intro">소개</h1>
+        <p id="top"></p>
+        <div>
+          <h2 id="come">찾아오는 길</h2>
+          <button id="map"><a target="_blank" href="https://map.naver.com/p/search/%EC%BD%94%EB%A6%AC%EC%95%84%EC%95%84%EC%9D%B4%ED%8B%B0%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8%20%EB%B6%80%EC%82%B0/place/1728207405?isCorrectAnswer=true&c=15.00,0,0,0,dh" id="m">네이버 지도</a></button>
+          <img id="location" src="img/naver_map.png">
+        </div>
+        <div>
+          <h2>인사말</h2>
+          <p class="salutation">이 홈페이지는 제출용 홈페이지로 가상의 도서관을 소개합니다.
+          </p>
+          <p class="salutation">
+          이 홈페이지는 보유하고 있는 도서 목록, 대출 신청, 요청하고 싶은 책을 입력할 수 있도록 되어있습니다.
+          </p>
+          <p class="salutation">
+            이 외에도 책에 대한 각자의 생각을 나눌 수 있는 생각나누기와 질문 및 건의 사항에 관해 작성할 수 있는 게시판이 있습니다.
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+  <script>
+
+  </script>
+</body>
+</html>

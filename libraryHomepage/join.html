@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #all{
+      position: absolute;
+      top: 50px;
+    }
+    header{
+      position: relative;
+      top: 10px;
+    }
+    #info{
+      position: relative;
+      top: 0px;
+      left: 1000px;
+      display: inline;
+    }
+    #login{
+      float: left;
+      border: none;
+      margin-right: 10px;
+      background-color: skyblue;
+      font-size: 20px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    #logo{
+      float: left;
+      height: 50px;
+      display: block;
+      position: relative;
+      left: 560px;
+      top: 20px;
+    }
+    #name{
+      float: left;
+      font-size: 50px;
+      margin-top: 0px;
+      background-image: url(img/bookLogo.jpg);
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: right;
+      padding-right: 45px;
+      border: none;
+      background-color: white;
+    }
+    #cloud{
+      margin-left: -370px;
+      margin-top: -140px;
+      position: relative;
+      z-index: -1;
+      width: 350px;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    #title{
+      position: relative;
+      left: 30px;
+      top: -90px;
+      width: 250px;
+      height: 50px;
+      font-size: 40px;
+    }
+    input{
+      font-size: 25px;
+      margin: 15px;
+      padding: 5px;
+      border-radius: 10px;
+      border: 3px solid skyblue;
+    }
+    #total{
+      position: relative;
+      top: -120px;
+      left: -50px;
+    }
+    #submit{
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 5px;
+      width: 260px;
+      background-color: skyblue;
+      color: white;
+      position: relative;
+      left: 45px;
+    }
+  </style>
+</head>
+<body>
+  <div id="all">
+    <header>
+      <div id="info">
+        <p id="login"><a href="login.html">로그인</a></p>
+      </div>
+    </header>
+      <div id="logo">
+        <p id="name"><a href="Home.html"><b>하늘도서관</b></a></p>
+        <img id="cloud" src="img/free-icon-clouds-9812010.png">
+        <form method="post">
+        <h1 id="title">회원가입</h1>
+        <br>
+        <div id="total">
+        <!-- 이름 -->
+        <div>
+          <input id="I" type="text" placeholder="이름">
+        </div>
+        <!-- 아이디 -->
+        <div>
+          <input id="Id" type="text" placeholder="아이디">
+        </div>
+        <!-- 비밀번호 -->
+        <div>
+          <input id="pw" type="password" placeholder="비밀번호">
+        </div>
+        <!-- 비밀번호 확인 -->
+        <div>
+          <input id="pwc" type="password" placeholder="비밀번호 확인">
+        </div>
+        <!-- 인증가능한 이메일 -->
+        <div>
+          <input id="Em" type="email" placeholder="인증 이메일">
+        </div>
+        <!-- 별명 -->
+        <div>
+          <input id="AS" type="text" placeholder="별명">
+        </div>
+        <br>
+        <button id="submit">완료</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const I = document.querySelector("#I")
+    const Id = document.querySelector("#Id")
+    const pw = document.querySelector("#pw")
+    const pwc = document.querySelector("#pwc")
+    const Em = document.querySelector("#Em")
+    const AS = document.querySelector("#AS")
+    const submit = document.querySelector("#submit")
+
+    submit.addEventListener("click",()=>{
+    // 공백인 경우
+      if(I.value==""){
+        alert("이름을 입력해주세요")
+        return
+      }
+      else if(Id.value==""){
+        alert("아이디를 입력해주세요")
+        return
+      }
+      else if(pw.value==""){
+        alert("비밀번호를 입력해주세요")
+        return
+      }
+      else if(pwc.value==""){
+        alert("비밀번호 확인을 입력해주세요")
+        return
+      }
+      if(Em.value==""){
+        alert("이메일을 입력해주세요")
+        return 
+      }
+    // 별명을 입력하지 않은 경우 이름과 동일하게 설정
+      if(AS.value==""){
+        AS.value=I.value
+        return
+      }
+
+    // 비밀번호와 비밀번호 확인이 다른 경우
+      if(pw.value!=pwc.value) {
+        alert("비밀번호 확인을 다시 입력해주세요")
+        return
+      }
+    })
+  </script>
+</body>
+</html>

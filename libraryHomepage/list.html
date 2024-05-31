@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #all{
+      position: absolute;
+      top: 50px;
+    }
+    header{
+      position: relative;
+      top: 10px;
+    }
+    #info{
+      position: relative;
+      top: 0px;
+      left: 1000px;
+      display: inline;
+    }
+    #logo{
+      float: left;
+      height: 50px;
+      display: inline;
+      position: relative;
+      left: 100px;
+    }
+    #name{
+      float: left;
+      font-size: 50px;
+      margin-top: 0px;
+      background-image: url(img/bookLogo.jpg);
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: right;
+      padding-right: 45px;
+      border: none;
+      background-color: ivory;
+    }
+    #cloud{
+      margin-left: -370px;
+      margin-top: -140px;
+      position: relative;
+      z-index: -1;
+      width: 350px;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    #login{
+      float: left;
+      border: none;
+      margin-right: 10px;
+      background-color: skyblue;
+      font-size: 20px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    #join{
+      float: left;
+      border: none;
+      margin-right: 10px;
+      background-color: skyblue;
+      font-size: 20px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    body{
+      background-color: ivory;
+    }
+    /* 사이드바 */
+    aside{
+      position: absolute;
+      top: 300px;
+      left: 120px;
+    }
+    li{
+      list-style-type: none;
+      border-left: 2px solid skyblue;
+      border-right: 2px solid skyblue;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #l1{
+      border-top: 2px solid skyblue;
+      border-bottom: 3px solid skyblue;
+    }
+    #l2{
+      border-bottom: 3px solid skyblue;
+    }
+    #l3{
+      border-bottom: 3px solid skyblue;
+    }
+    #l4{
+      border-bottom: 3px solid skyblue;
+    }
+    #l5{
+      border-bottom: 2px solid skyblue;
+    }
+    /* 도서 목록 */
+    #list{
+      font-size: 100px;
+      background-color: skyblue;
+      text-align: center;
+      position: relative;
+      left: 570px;
+      top: 20px;
+      width: 550px;
+      vertical-align: middle;
+      color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+    }
+    table{
+      border-collapse: collapse;
+      width: 900px;
+      position: relative;
+      left: 400px;
+      background-color: white;
+    }
+    td{
+      border: 3px solid skyblue;
+      text-align: center;
+      font-size: 18px;
+      font-family: "맑은 고딕";
+    }
+    .top{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    #box{
+      width: 20px;
+    }
+    tr:hover{
+      font-weight: bold;
+    }
+    #control{
+      position: relative;
+      margin-top: 10px;
+      left: 135%;
+    }
+  </style>
+</head>
+<body>
+  <div id="all">
+    <header>
+      <div id="logo">
+        <p id="name"><a href="Home.html"><b>하늘도서관</b></a></p>
+        <img id="cloud" src="img/free-icon-clouds-9812010.png">
+      </div>
+      <div id="info">
+        <p id="login"><a href="login.html">로그인</a></p>
+        <p id="join"><a href="join.html">회원가입</a></p>
+      </div>
+    </header>
+      <div>
+        <aside>
+          <ul>
+            <li id="l1"><a href="loan.html">대출 신청</a></li>
+            <li id="l2"><a href="requestBook.html">책 요청</a></li>
+            <li id="l3"><a href="think.html">생각 나누기</a></li>
+            <li id="l4"><a href="Q&A.html">건의 사항</a></li>
+            <li id="l5"><a href="introduction.html">소개</a></li>
+          </ul>
+        </aside>
+      </div>
+      <div id="main">
+        <h1 id="list">도서 목록</h1>
+        <table id="t1">
+          <tr>
+            <td id="box"></td>
+            <td class="top">제목</td>
+            <td class="top">저자</td>
+            <td class="top">출판사</td>
+            <td class="top">출판연도</td>
+            <td class="top">위치</td>
+            <td class="top">수량</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>불변의 법칙</td>
+            <td>모건 하우절</td>
+            <td>서삼독</td>
+            <td>2024-02-28</td>
+            <td>a1</td>
+            <td>5</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>부자의 마지막 가르침</td>
+            <td>다우치 마나부</td>
+            <td>북모먼트</td>
+            <td>2024-05-22</td>
+            <td>a2</td>
+            <td>3</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>어떻게 살 것인가</td>
+            <td>이광수</td>
+            <td>이든하우스</td>
+            <td>2024-05-02</td>
+            <td>a3</td>
+            <td>2</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>변방에서 중심으로</td>
+            <td>문재인</td>
+            <td>김영사</td>
+            <td>2024-05-18</td>
+            <td>a4</td>
+            <td>4</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>모순</td>
+            <td>양귀자</td>
+            <td>쓰다</td>
+            <td>2013-04-01</td>
+            <td>a5</td>
+            <td>6</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>당신은 결국 무엇이든 해내는 사람</td>
+            <td>김상현</td>
+            <td>필름(Feelm)</td>
+            <td>2022-04-20</td>
+            <td>a6</td>
+            <td>3</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>세이노의 가르침</td>
+            <td>세이노</td>
+            <td>데이원</td>
+            <td>2023-03-02</td>
+            <td>a7</td>
+            <td>2</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>돈의 심리학</td>
+            <td>모건 하우절</td>
+            <td>인플루엔셜</td>
+            <td>2023-11-06</td>
+            <td>a8</td>
+            <td>4</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>오십, 나는 재미있게 살기로 했다</td>
+            <td>이서원</td>
+            <td>나무사이</td>
+            <td>2024-05-08</td>
+            <td>a9</td>
+            <td>7</td>
+          </tr>
+          <tr class="bookInfo">
+            <td><input class="check" type="checkbox"></td>
+            <td>나의 돈키호테</td>
+            <td>김호연</td>
+            <td>나무옆의자</td>
+            <td>2024-04-25</td>
+            <td>a10</td>
+            <td>3</td>
+          </tr>
+        </table>
+        <div id="control">
+          <button id="add">추가</button>
+          <button id="del">삭제</button>
+        </div>
+      </div>
+    </div>
+  <script>
+    const mtable = document.querySelector("#t1")
+    const add = document.querySelector("#add")
+    const del = document.querySelector("#del")
+
+    // 삭제 버튼 클릭 시
+    del.addEventListener("click",()=>{
+      const checks = document.querySelectorAll(".check")
+      const trs = document.querySelectorAll("tr")
+      let a = 0
+      let b = 0
+      let nums = []
+
+      // 행과 checkbox에 동일 번호 추가
+      checks.forEach((check)=>{
+        const number = ++a
+        check.setAttribute("num", number)
+      })
+      trs.forEach((tr)=>{
+        const number = b++
+        tr.setAttribute("num", number)
+      })
+
+      // 배열에 번호 추가
+      checks.forEach((check)=>{
+        if(check.checked) {
+          nums.push(check.getAttribute("num"))
+        }
+      })
+
+      // 나중에 있는 것 부터 삭제
+      for(let i=nums.length-1;i>=0;i--) {
+        trs.forEach((tr)=>{
+        if(tr.getAttribute("num")==nums[i]){
+          tr.remove()
+          }
+        })
+      }
+    })
+
+  // 버튼 클릭 시 비활성화
+  function btnDisabled()  {
+    const target = document.querySelector("#add");
+    target.disabled = true;
+  }
+
+  // 버튼 다시 클릭 시 활성화
+  function btnabled() {
+    const target = document.querySelector("#add");
+    target.disabled = false;
+  }
+
+    // 추가 버튼 클릭 시
+    add.addEventListener("click",()=>{
+
+      btnDisabled()
+
+      const main = document.querySelector("#main")
+      const d = document.createElement("div")
+      const addTable = document.createElement("table")
+      const book=document.createElement("tr")
+      const aTitle=document.createElement("td")
+      const aAuthor=document.createElement("td")
+      const aPublisher=document.createElement("td")
+      const ayear = document.createElement("td")
+      const alocation = document.createElement("td")
+      const del = document.createElement("td")
+      const cnt = document.createElement("td")
+
+      main.appendChild(d)
+      d.appendChild(addTable)
+      addTable.appendChild(book)
+      book.appendChild(aTitle)
+      book.appendChild(aAuthor)
+      book.appendChild(aPublisher)
+      book.appendChild(ayear)
+      book.appendChild(alocation)
+      book.appendChild(cnt)
+      book.appendChild(del)
+
+      addTable.style.marginTop="10px"
+
+      // 카테고리 만들기
+      aTitle.textContent="제목"
+      aAuthor.textContent="저자"
+      aPublisher.textContent="출판사"
+      ayear.textContent="출판연도"
+      alocation.textContent="위치"
+      cnt.textContent="수량"
+
+      aTitle.style.width="250px"
+      aAuthor.style.width="110px"
+      aPublisher.style.width="86px"
+      ayear.style.width="82px"
+      alocation.style.width="80px"
+      cnt.style.width="60px"
+      del.style.width="60px"
+        
+      // 입력할 칸 추가
+      const addInfo = document.createElement("button")
+      d.appendChild(addInfo)
+      addInfo.textContent="+"
+      addInfo.style.width="40px"
+      addInfo.style.height="30px"
+      addInfo.style.position="relative"
+      addInfo.style.left="1120px"
+      addInfo.style.marginTop="10px"
+
+      // 저장할 버튼 생성 및 클릭
+      const comp = document.createElement("button")
+        d.appendChild(comp)
+        comp.textContent="저장"
+        comp.style.width="50px"
+        comp.style.height="30px"
+        comp.style.position="relative"
+        comp.style.left="1120px"
+        comp.style.marginTop="10px"
+        comp.style.marginLeft="10px"
+
+      // 칸 추가(+) 클릭 시
+      addInfo.addEventListener("click",()=>{
+        const iTr = document.createElement("tr")
+        const itd1 = document.createElement("td")
+        const itd2 = document.createElement("td")
+        const itd3 = document.createElement("td")
+        const itd4 = document.createElement("td")
+        const itd5 = document.createElement("td")
+        const itd6 = document.createElement("td")
+        const itd7 = document.createElement("td")
+        const input1 = document.createElement("input")
+        const input2 = document.createElement("input")
+        const input3 = document.createElement("input")
+        const input4 = document.createElement("input")
+        const input5 = document.createElement("input")
+        const input6 = document.createElement("input")
+        const dlt = document.createElement("button")
+
+        addTable.appendChild(iTr)
+        iTr.appendChild(itd1)
+        iTr.appendChild(itd2)
+        iTr.appendChild(itd3)
+        iTr.appendChild(itd4)
+        iTr.appendChild(itd5)
+        iTr.appendChild(itd6)
+        iTr.appendChild(itd7)
+
+        itd1.appendChild(input1)
+        itd2.appendChild(input2)
+        itd3.appendChild(input3)
+        itd4.appendChild(input4)
+        itd5.appendChild(input5)
+        itd6.appendChild(input6)
+        itd7.appendChild(dlt)
+
+        dlt.textContent="삭제"
+        dlt.style.backgroundColor="skyblue"
+        dlt.style.color="white"
+        dlt.style.borderRadius="5px"
+        dlt.style.border="skyblue"
+
+        input1.style.width="80%"
+        input2.style.width="80%"
+        input3.style.width="80%"
+        input4.style.width="80%"
+        input5.style.width="80%"
+        input6.style.width="80%"
+        dlt.style.width="60px"
+
+        input1.style.border="none"
+        itd1.style.padding="5px"
+        input1.style.padding="10px"
+        input1.style.fontSize="16px"
+
+        input2.style.border="none"
+        itd2.style.padding="5px"
+        input2.style.padding="10px"
+        input2.style.fontSize="16px"
+
+        input3.style.border="none"
+        itd3.style.padding="5px"
+        input3.style.padding="10px"
+        input3.style.fontSize="16px"
+
+        input4.style.border="none"
+        itd4.style.padding="5px"
+        input4.style.padding="10px"
+        input4.style.fontSize="16px"
+
+        input5.style.border="none"
+        itd5.style.padding="5px"
+        input5.style.padding="10px"
+        input5.style.fontSize="16px"
+        
+        input6.style.border="none"
+        itd6.style.padding="5px"
+        input6.style.padding="5px"
+        input6.style.fontSize="16px"
+
+        // 삭제 버튼 클릭 시
+        dlt.addEventListener("click",()=>{
+          iTr.setAttribute("del", "1")
+          iTr.remove()
+        })
+
+        // 저장 버튼 클릭 시 표에 추가 및 추가 테이블 삭제
+        comp.addEventListener("click",()=>{
+        
+          // 삭제를 하지 않은 행 추가
+          if(iTr.getAttribute("del")!="1") {
+            const tr = document.createElement("tr")
+            const td0 = document.createElement("td")
+            const inp = document.createElement("input")
+            const td1 = document.createElement("td")
+            const td2 = document.createElement("td")
+            const td3 = document.createElement("td")
+            const td4 = document.createElement("td")
+            const td5 = document.createElement("td")
+            const td6 = document.createElement("td")
+
+            inp.type="checkbox"
+            inp.className="check"
+
+            td1.textContent=input1.value
+            td2.textContent=input2.value
+            td3.textContent=input3.value
+            td4.textContent=input4.value
+            td5.textContent=input5.value
+            td6.textContent=input6.value
+
+            tr.appendChild(td0)
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            tr.appendChild(td4)
+            tr.appendChild(td5)
+            tr.appendChild(td6)
+            td0.appendChild(inp)
+            mtable.appendChild(tr)
+          }
+
+          addTable.remove()
+          addInfo.remove()
+          comp.remove()
+          btnabled()
+        }) 
+      })
+    })
+    
+  </script>
+</body>
+</html>
