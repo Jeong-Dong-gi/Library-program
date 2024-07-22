@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="도서관리 데이터베이스" id="2AAFF6E9-C9B4-218A-46F6-B098E2AEF71F" version="3.5">
-<createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 01:46:18 UTC</createdTime>
-<ownerDesignName>도서관리 데이터베이스</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>2AAFF6E9-C9B4-218A-46F6-B098E2AEF71F</designId>
-</OSDM_Design>
