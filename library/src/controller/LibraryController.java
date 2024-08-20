@@ -170,7 +170,7 @@ public class LibraryController {
 	BufferedWriter bookRequestList = null;
 	try {
 		bookList = new BufferedWriter(new FileWriter("./도서 관리 목록.txt"));
-		bookLoanList = new BufferedWriter(new FileWriter("대출중인 책 목록.txt"));	
+		bookLoanList = new BufferedWriter(new FileWriter("./대출중인 책 목록.txt"));	
 		bookRequestList = new BufferedWriter(new FileWriter("./요청된 책 목록.txt"));
 		// 보유중인 책 목록
 		for(int i = 0; i < libraryService.getBookList().size();i++) {
