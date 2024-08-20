@@ -1,7 +1,8 @@
 package dto;
 
+import java.io.Serializable;
 
-public class LibraryDto{
+public class LibraryDto implements Serializable{
 	
 	private String book;
 	private String writer;

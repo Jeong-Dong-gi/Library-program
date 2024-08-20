@@ -270,7 +270,7 @@ public class LibraryList implements LibraryService {
 			if(bookRequestList.get(i).equals(book)) {
 				System.out.println(i + "번째 " + "'" + bookRequestList.get(i) + "'을 삭제합니다.");
 				bookRequestList.remove(book);
-				x = false;
+				x = false; 
 			}	
 		}
 		if(x)

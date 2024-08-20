@@ -32,7 +32,7 @@ public class LibraryView {
 		return choice;
 	}
 	
-	// 프로그램 기능 출력 - 관리자
+	// 프로그램 기능 출력
 	public int getAdminMenu() {
 		System.out.println("----------------------");
 		System.out.println("도서 관리 프로그램 입니다.");
@@ -140,7 +140,7 @@ public class LibraryView {
 	
 	// 저자 입력
 	public String BookWriter() {
-		System.out.println("책의 저자를 입력하세요(대표 저자 한 명만 입력)");
+		System.out.println("책의 저자를 입력하세요");
 		System.out.println("----------------");
 		String bookWriter = sc.nextLine();
 		return bookWriter;
